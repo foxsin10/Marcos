@@ -42,6 +42,67 @@ typedef struct __attribute__((objc_boxable)) CGAffineTransform CGAffineTransform
 typedef struct __attribute__((objc_boxable)) UIEdgeInsets UIEdgeInsets;
 typedef struct __attribute__((objc_boxable)) _NSRange NSRange;
 
+// https://pspdfkit.com/blog/2017/even-swiftier-objective-c/
+@protocol YZJFastEnumeration <NSFastEnumeration>
+- (id)yzj_enumeratedType;
+@end
 
+// Usage: foreach (s, strings) { ... }
+#define forEach(element, collection) for (typeof((collection).yzj_enumeratedType) element in (collection))
+
+@interface NSArray <ElementType> (YZJFastEnumeration)
+<YZJFastEnumeration>
+
+- (ElementType)yzj_enumeratedType;
+
+@end
+
+@interface NSSet <ElementType> (YZJFastEnumeration)
+<YZJFastEnumeration>
+
+- (ElementType)yzj_enumeratedType;
+
+@end
+
+@interface NSDictionary <KeyType, ValueType> (YZJFastEnumeration)
+<YZJFastEnumeration>
+
+- (KeyType)yzj_enumeratedType;
+
+@end
+
+@interface NSOrderedSet <ElementType> (YZJFastEnumeration)
+<YZJFastEnumeration>
+
+- (ElementType)yzj_enumeratedType;
+
+@end
+
+@interface NSPointerArray (PSPDFFastEnumeration) <YZJFastEnumeration>
+
+- (void *)yzj_enumeratedType;
+
+@end
+
+@interface NSHashTable <ElementType> (YZJFastEnumeration)
+<YZJFastEnumeration>
+
+- (ElementType)yzj_enumeratedType;
+
+@end
+
+@interface NSMapTable <KeyType, ValueType> (YZJFastEnumeration)
+<YZJFastEnumeration>
+
+- (KeyType)yzj_enumeratedType;
+
+@end
+
+@interface NSEnumerator <ElementType> (YZJFastEnumeration)
+<YZJFastEnumeration>
+
+- (ElementType)yzj_enumeratedType;
+
+@end
 
 #endif /* YZJMarcos_h */

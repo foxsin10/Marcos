@@ -9,7 +9,16 @@
 #import "ViewController.h"
 #import "YZJMarcos.h"
 
-//DISPATCH_ASSUME_NONNULL_BEGIN
+@interface Todo: NSObject
+@property (nonatomic, copy) NSString *title;
+@property (nonatomic, copy) NSString *todo;
+@end
+
+@implementation Todo
+
+@end
+
+
 // Takes in an NSArray<NSString *> *
 static void processSomePeople(NSArray<NSString *> *peoples) {
     NSCParameterAssert([peoples isKindOfClass:[NSArray class]]);
@@ -52,6 +61,27 @@ static NSString * _Nullable currentUserId() {
     NSLog(@"%@", test);
     var people = @[@"1"];
     processSomePeople(people);
+
+    NSMutableArray<Todo *> *araay;
+    araay = @[[[Todo alloc]init],[[Todo alloc]init],[[Todo alloc]init]].mutableCopy;
+
+    let todoList = araay;
+
+    forEach(todo, todoList) {
+        NSLog(@"%@, %p", todo, todo);
+
+        var title = todo.title;
+        var content = todo.todo;
+        title = @"a";
+        content = @"tee";
+        NSLog(@"%@, %@", title, content);
+
+    };
+
+    forEach(t, test) {
+        NSLog(@"%@", t);
+
+    };
 
     [people enumerateObjectsUsingBlock:^(NSNumber * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         NSLog(@"%@", obj);
