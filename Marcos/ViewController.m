@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "YZJMarcos.h"
 
-DISPATCH_ASSUME_NONNULL_BEGIN
+//DISPATCH_ASSUME_NONNULL_BEGIN
 // Takes in an NSArray<NSString *> *
 static void processSomePeople(NSArray<NSString *> *peoples) {
     NSCParameterAssert([peoples isKindOfClass:[NSArray class]]);
