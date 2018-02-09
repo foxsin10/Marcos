@@ -33,6 +33,7 @@ static NSArray<NSNumber *> *somePeopleNumbers() {
     return @[@1, @2, @3];
 }
 
+// let var 缺少 nullable/nonull 类型检查支持
 static void removeUserFromCacheWithId(NSString * _Nonnull greeting) {
     // Try to remove the user from the cache
 }
