@@ -35,8 +35,11 @@ static NSString * _Nullable currentUserId() {
     }
 }
 
-@interface ViewController ()
 
+@interface ViewController ()
+{
+    NSString *tttl;
+}
 @end
 
 @implementation ViewController
@@ -45,15 +48,17 @@ static NSString * _Nullable currentUserId() {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 
-    let people = somePeopleNumbers();
+    let test = somePeopleNumbers();
+    NSLog(@"%@", test);
+    var people = @[@"1"];
     processSomePeople(people);
 
     [people enumerateObjectsUsingBlock:^(NSNumber * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-
+        NSLog(@"%@", obj);
     }];
 
     let block = ^(NSNumber * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-
+         NSLog(@"%@", obj);
     };
     [people enumerateObjectsUsingBlock:block];
 
@@ -65,6 +70,15 @@ static NSString * _Nullable currentUserId() {
 
     let usertId = currentUserId();
     removeUserFromCacheWithId(usertId);
+
+    self->tttl = @"adeeqqq";
+    NSString *tttl = @"eeqqq";
+    NSLog(@"%@, %@", self->tttl, tttl);
+
+
+    CGRect rect = CGRectMake(0, 0, 100, 50);
+    NSValue *boxedRect = @(rect);
+    NSLog(@"boxed: %@", boxedRect);
 }
 
 
