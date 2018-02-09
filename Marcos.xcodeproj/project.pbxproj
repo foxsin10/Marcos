@@ -52,6 +52,7 @@
 		15796E76202D41F000D34D7D /* MarcosUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MarcosUITests.m; sourceTree = "<group>"; };
 		15796E78202D41F000D34D7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15796E84202D42F400D34D7D /* YZJMarcos.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZJMarcos.h; sourceTree = "<group>"; };
+		15796E85202D803A00D34D7D /* YZJForEach.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = YZJForEach.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +113,7 @@
 				15796E60202D41F000D34D7D /* Info.plist */,
 				15796E61202D41F000D34D7D /* main.m */,
 				15796E84202D42F400D34D7D /* YZJMarcos.h */,
+				15796E85202D803A00D34D7D /* YZJForEach.h */,
 			);
 			path = Marcos;
 			sourceTree = "<group>";
