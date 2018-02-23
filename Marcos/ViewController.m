@@ -14,8 +14,8 @@ struct TTL {
     CGPoint adad;
     CGFloat tent;
 };
-typedef struct CG_BOXABLE CGPoint CGPoint;
-
+//typedef struct CG_BOXABLE CGPoint CGPoint;
+//# define CG_BOXABLE __attribute__((objc_boxable))
 @interface Todo: NSObject
 @property (nonatomic, copy) NSString *title;
 @property (nonatomic, copy) NSString *todo;
@@ -66,6 +66,7 @@ static NSString * _Nullable currentUserId() {
     // Do any additional setup after loading the view, typically from a nib.
 
     struct TTL a;
+    
 //    a.tent
 //    var t = CGRectMake(<#CGFloat x#>, <#CGFloat y#>, <#CGFloat width#>, <#CGFloat height#>)
 
